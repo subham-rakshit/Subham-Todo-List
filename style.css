@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.todo-bg-container {
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #292828, #261616);
+  font-family: "Roboto";
+  padding: 20px 0;
+  width: 100%;
+}
+#cursorElm {
+  height: 30px;
+  width: 30px;
+  background-color: rgb(131, 187, 93);
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(20px);
+}
+
+/* User Input  */
+.header-elm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 2px solid white; */
+  background-color: transparent;
+  /* gap: 50px; */
+  /* background-color: black; */
+}
+.todo-logo {
+  width: 50px;
+  height: 50px;
+}
+.todo-heading {
+  color: #e89d3c;
+  text-align: center;
+  /* background-color: white; */
+  /* border: 2px solid red; */
+  font-size: 40px;
+  font-weight: 700;
+  word-spacing: 10px;
+  letter-spacing: 8px;
+}
+/* .todo-heading:hover {
+    transform: scaleX(2);
+    transition-duration: 1s;
+} */
+.teacher-logo {
+  width: 70px;
+  height: 85px;
+  /* background-color: yellow; */
+}
+.user-input-section {
+  /* border: 2px solid red; */
+  margin-top: 20px;
+}
+.user-input-section h1 {
+  color: rgb(159, 150, 150);
+  font-size: 32px;
+  padding-left: 20px;
+}
+.individual-elm {
+  font-size: 37px;
+  font-weight: 900;
+  color: white;
+}
+.individual-elm:hover {
+  color: rgb(159, 150, 150);
+}
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.input-section button {
+  margin-left: 20px;
+}
+#textInput {
+  color: rgb(52, 51, 51);
+  border: none;
+  /* width: 50%; */
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  border-radius: 10px;
+  padding: 5px 10px;
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+}
+.alert-text {
+  color: red;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 20px;
+  /* border: 1px solid red; */
+}
+.button-style {
+  background-color: rgb(95, 92, 92);
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  width: 120px;
+  /* margin-top: 20px; */
+  padding: 10px 5px;
+  border-radius: 10px;
+  position: relative;
+  border: none;
+}
+.button-style:hover {
+  background-color: #4c63b6;
+}
+
+/* Your Tasks Section */
+
+.ur-tasks-heading {
+  color: rgb(159, 150, 150);
+  font-size: 35px;
+  padding-left: 20px;
+  margin-top: 30px;
+}
+.body-part {
+  margin-top: 20px;
+  /* border: 2px solid red; */
+  margin-left: 20px;
+}
+.tasks-container {
+  background-color: rgb(225, 216, 216);
+  border-radius: 20px;
+  overflow: auto;
+  padding: 20px 20px;
+  position: relative;
+  gap: 15px;
+}
+.todo-lists-container {
+  list-style-type: none;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  /* padding: 20px 0; */
+}
+.checkbox-style {
+  width: 21px;
+  height: 21px;
+  box-shadow: 2px 2px 5px #999e9b;
+  cursor: pointer;
+}
+.lable-container {
+  border: 5px solid rgb(105, 17, 188);
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  border-radius: 15px;
+  background-color: rgb(192, 225, 225);
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 5px 5px 10px #999e9b;
+}
+@media (width < 576px) {
+  .lable-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+.timer-style {
+  color: #959695;
+  font-size: 13px;
+  font-weight: 500;
+  margin-right: 10px;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+}
+@media (width < 576px) {
+  .timer-style {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+}
+.todos-style {
+  color: black;
+  font-size: 22px;
+  margin-left: 10px;
+  font-weight: 600;
+  /* border: 1px solid red; */
+}
+.todo-isChecked {
+  text-decoration: line-through;
+  color: green;
+  transform: translateX(20px);
+}
+.icon-container {
+  width: 100px;
+  /* background-color: red; */
+  text-align: center;
+  border-radius: 15px;
+  padding: 20px 0;
+}
+.delete-icon-style {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  /* border: 1px solid red; */
+}
+.delete-icon-style:hover {
+  transform: scale(1.2);
+}
